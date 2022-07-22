@@ -62,28 +62,22 @@ const ContentBottomRow = styled.div`
   }
 
   a {
-    width: 70px;
-    height: 70px;
-    background:#0000FF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    z-index= 999;
-    border-radius: 50%;
-    color:#ffffff;
-    font-size: 40px;
-    box-shadow: 2px 2px 5px Ergba(0, 0, 0, 0.25);
     position: fixed;
     right: 20px;
     bottom: 20px;
-    transition: background 0.25s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color:#ffffff;
+    font-size: 40px;
+    background:#3F00FF;
+    box-shadow: 0.5px 0.5px 3px #888888;
+   
   }
 
-a : active {
-     background: #007D63;
-    }
 `;
 
 const AddStatus = styled.span`

@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledListItem = styled.a`
+  
   background: #fafafa;
   display: flex;
   align-items: center;
@@ -62,27 +63,22 @@ const ContentBottomRow = styled.div`
   }
 
   a {
-      width: 70px;
-      height: 70px;
-      background:#0000FF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      z-index= 999;
-      border-radius: 50%;
-      color:#ffffff;
-      font-size: 40px;
-      box-shadow: 2px 2px 5px Ergba(0, 0, 0, 0.25);
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      transition: background 0.25s;
-    }
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color:#ffffff;
+    font-size: 40px;
+    background:#3F00FF;
+    box-shadow: 0.5px 0.5px 3px #888888;
+   
+  }
 
-a : active {
-       background: #007D63;
-      }
 `;
 
 type Props = {

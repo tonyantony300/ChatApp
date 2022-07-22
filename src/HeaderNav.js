@@ -13,10 +13,7 @@ const StyledHeaderNav = styled.nav`
   font-weight: 600;
   height: 75px;
   display: flex;
-  border-radius: 24px;
- 
   border-collapse: collapse;
-
   letter-spacing: 0.4px;
   justify-content: space-between;
   color: white;
@@ -99,7 +96,7 @@ const HeaderNav = ({ changeViewState, viewState }: Props) => {
         current="4"
       >
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <title>calls</title>
+          <title>search</title>
         <path d="M11.6669 4.66667H11.6661C7.80033 4.66667 4.6665 7.80049 4.6665 11.6663V11.6671C4.6665 15.5329 7.80033 18.6667 11.6661 18.6667H11.6669C15.5327 18.6667 18.6665 15.5329 18.6665 11.6671V11.6663C18.6665 7.80049 15.5327 4.66667 11.6669 4.66667Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
         <path d="M17.1108 17.1111L23.3331 23.3334" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
         </svg>

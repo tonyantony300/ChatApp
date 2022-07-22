@@ -12,7 +12,9 @@ const StyledHeaderTop = styled.div`
   display: flex;
   height: 90px;
   align-items: center;
-  border-radius: 24px;
+  z-index: 999;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+
 `;
 
 const SearchBar = styled.div`
@@ -46,21 +48,30 @@ const SearchBar = styled.div`
 
 const Title = styled.div`
   flex: 6;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   
+
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-top:30px;
+    margin-bottom: 30px;
+  }
+
   h3 {
-    align-self: flex-end;
     color: white;
     font-weight: 350;
     font-size: 1.3em;
-    padding-left: 20px;
-    display:inline-block;
-    margin-right:10px;
-    margin-bottom:20px;
+    padding-left: 10px;
     height:30px;
+    }
+
+
   
-    
-   
-  }
 `;
 
 
@@ -99,22 +110,7 @@ const SettingsIcon = styled.div`
   }
 `;
 
-const Diana = styled.div`
-  flex-basis: 20%;
-  padding-left: 10px;
-  padding-right: 5px;
-  display:inline-block;
 
-  img {
-
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    margin-top:30px;
-    display:inline-block;
-  }
-
-`;
 
 type Props = {
   handleSearchtermChange: Function,
@@ -137,11 +133,13 @@ const HeaderTop = ({
 }: Props) => {
   return (
     <StyledHeaderTop>
+      
         <Title>
-          <Diana >
+      
           <img src='images/Diana.jpg' alt=''/>
-          </Diana>
           <h3>Diana</h3>
+      
+         
         </Title>
 
       <SearchBar isVisible={searchInputIsvisible}>

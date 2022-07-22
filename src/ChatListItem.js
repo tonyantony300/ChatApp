@@ -10,7 +10,8 @@ import { truncateString } from "./helpers";
 import { Transition } from "react-spring";
 
 const StyledListItem = styled.a`
-  background: #FFFFFF;
+  background: #fff;
+  position: relative;
   display: flex;
   align-items: center;
   &:active {
@@ -43,13 +44,13 @@ const ListItemAvatar = styled.div`
 `;
 
 const UserIcons = styled.div`
-  background-color: white;
+  background-color: #D3D3D3;
   display: ${props => (props.avatarIsOpen ? "flex" : "none")};
   justify-content: space-around;
   /* all scaled */
   margin-top: ${props => (props.avatarIsOpen ? "-5px" : "0px")};
   padding: 2px;
-  width: 50px;
+  width: 60px;
   img {
     max-width: 5px;
     max-height: 5px;
@@ -57,35 +58,21 @@ const UserIcons = styled.div`
 `;
 
 const StyledContactDetail = styled.div`
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #fff;
   position: fixed;
   width: 100%;
-  height: 500px;
+  height: 100px;
   top: 0;
   height: 100%;
   display: flex;
   justify-content: center;
 `;
 
-const blackDot = styled.div`
-height: 18px;
-width: 18px;
-background-color: #000000;
-border-radius: 50%;
-display: inline-block;
+//here dp background section 
 
-`;
-
-const yellowDot = styled.div`
-height: 6px;
-width: 6px;
-background-color: #E7E049;
-border-radius: 50%;
-display: inline-block;
-
-`;
 
 const ListItemContent = styled.div`
+  position: relative;
   flex-basis: 80%;
   border-bottom: 1px solid #ffffff;
   padding-left: 13px;
@@ -93,6 +80,7 @@ const ListItemContent = styled.div`
 `;
 
 const ContentTopRow = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding-bottom: 4.5px;
@@ -122,27 +110,22 @@ const ContentBottomRow = styled.div`
   }
 
   a {
-    width: 70px;
-    height: 70px;
-    background:#0000FF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    z-index= 999;
-    border-radius: 50%;
-    color:#ffffff;
-    font-size: 40px;
-    box-shadow: 2px 2px 5px Ergba(0, 0, 0, 0.25);
     position: fixed;
     right: 20px;
     bottom: 20px;
-    transition: background 0.25s;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color:#ffffff;
+    font-size: 40px;
+    background:#3F00FF;
+    box-shadow: 0.5px 0.5px 3px #888888;
+   
   }
 
-a : active {
-     background: #007D63;
-    }
 `;
 
 const ContactDetailOverlay = ({ avatar, title, style, toggleAvatar }) => (
@@ -215,17 +198,14 @@ class ChatListItem extends React.Component<Props, State> {
           </ContentTopRow>
           <ContentBottomRow>
             <span className="preview">{truncateString(preview, 40)}</span>
-            <span>{(id % 2 === 0 ? blackDot:yellowDot)}</span>
-
             <a href="http://www.google.com" >
-            <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12.1667" cy="9.33334" r="4.66667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M18.928 23.8549C18.5292 22.3665 17.6503 21.0513 16.4278 20.1132C15.2053 19.1751 13.7074 18.6667 12.1665 18.6667C10.6256 18.6667 9.12769 19.1751 7.90518 20.1132C6.68267 21.0513 5.80385 22.3665 5.40502 23.8549" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M22.6665 11.6667L22.6665 18.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M26.1665 15.1667L19.1665 15.1667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-
-        </a>
+                <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12.1667" cy="9.33334" r="4.66667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M18.928 23.8549C18.5292 22.3665 17.6503 21.0513 16.4278 20.1132C15.2053 19.1751 13.7074 18.6667 12.1665 18.6667C10.6256 18.6667 9.12769 19.1751 7.90518 20.1132C6.68267 21.0513 5.80385 22.3665 5.40502 23.8549" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M22.6665 11.6667L22.6665 18.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M26.1665 15.1667L19.1665 15.1667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
           </ContentBottomRow>
         </ListItemContent>
       </StyledListItem>

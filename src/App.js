@@ -16,7 +16,7 @@ injectGlobal`
    body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background-color: #ffffff;
+    background-color: #fff;
    }
 `;
 
@@ -26,7 +26,7 @@ const StyledApp = styled.div`
   position: relative;
 `;
 
-type State = {
+type State = { 
   viewState: string,
   chatScreenIsVisible: boolean,
   currentChatId: number,

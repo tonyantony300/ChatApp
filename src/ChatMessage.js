@@ -10,7 +10,7 @@ const ArrowLeft = styled.div`
   height: 0;
   border-top: 0px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 15px solid #fff;
+  border-right: 15px solid #f2f2f2;
 `;
 
 const ArrowRight = styled.div`
@@ -20,30 +20,32 @@ const ArrowRight = styled.div`
   height: 0;
   border-top: 0px solid transparent;
   border-bottom: 20px solid transparent;
-  border-left: 15px solid #fff;
+  border-left: 15px solid #d0ebf8;
 `;
 
 const StyledChatMessage = styled.div`
   display: flex;
-  animation: fadeIn .3s linear ;
+
   justify-content: ${props =>
     props.status === "incoming" ? "flex-start" : "flex-end"};
+
     span {
-      background-color: ${props =>
-        props.status === "incoming" ? "#fff" : "#ffff"};
+        background-color: ${props =>
+        props.status === "incoming" ? "#f2f2f2" : "#d0ebf8"};
       margin-top: 7px;
       max-width: 75%;
+      padding: 5px;
       border-radius: ${props =>
         props.status === "incoming" ? "0px 3px 3px 3px" : "3px 0px 3px 3px"};
-      padding: 5px;
       span {
         padding: 0 0 0 8px;
-        color: #ffff;
+        color: #333;
         float: right;
         font-size: .8em;
       }
     }
   }
+
   @keyframes fadeIn {
     0%, 20% {
       opacity: 0;

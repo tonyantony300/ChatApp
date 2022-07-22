@@ -9,20 +9,13 @@ import ChatMessage from "./ChatMessage";
 import ChatScreenHeader from "./ChatScreenHeader.js";
 
 const StyledChatScreen = styled.div`
-  background-color: #848a88;
+  background-color: #fff;
   position: absolute;
   top: 0;
   z-index: 1;
-  
 `;
 
 const ChatContent = styled.div`
-  padding-top: 60px;
-  padding-bottom: 50px;
-  padding-right: 5px;
-  padding-left: 5px;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
 
   overflow: hidden;
   display: flex;

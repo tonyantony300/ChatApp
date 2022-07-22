@@ -8,15 +8,14 @@ import styled from "styled-components";
 
 const Carousel = styled.div`
   min-width: 200px;
-  min-height: 621px;
+  min-height: 650px;
   overflow-y: hidden;
   overflow-x: hidden;
   position: relative;
   padding: 0;
-  background-color: #fffff;
+  background-color: #fff;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  border-collapse: collapse; 
 `;
 // here changes the background
 const CarouselTrack = styled.div`
@@ -62,16 +61,18 @@ const MainCarousel = ({ viewState, showChatScreen, searchTerm }: Props) => {
   return (
     <Carousel>
       <CarouselTrack goToSlide={position}>
-        <Slide defaultPosition={"0%"}><ChatList searchTerm={searchTerm} showChatScreen={showChatScreen} /></Slide>
-        <Slide defaultPosition={"100%"}>
-          <ChatList searchTerm={searchTerm} showChatScreen={showChatScreen} />
-        </Slide>
-        <Slide defaultPosition={"200%"}>
-          <StatusList />
-        </Slide>
-        <Slide defaultPosition={"300%"}>
-          <CallsList />
-        </Slide>
+          <Slide defaultPosition={"0%"}>
+            <ChatList searchTerm={searchTerm} showChatScreen={showChatScreen} />
+            </Slide>
+          <Slide defaultPosition={"100%"}>
+            <ChatList searchTerm={searchTerm} showChatScreen={showChatScreen} />
+          </Slide>
+          <Slide defaultPosition={"200%"}>
+            <StatusList />
+          </Slide>
+          <Slide defaultPosition={"300%"}>
+            <CallsList />
+          </Slide>
       </CarouselTrack>
     </Carousel>
   );
