@@ -1,6 +1,6 @@
- run with npm start.
+                              run with npm start.
  
-dependencies =
+dependencies - 
     flow-bin
     react-scripts
     react-spring
