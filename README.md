@@ -1,4 +1,4 @@
-                              run with npm start.
+                             - run with npm start -
  
 dependencies - 
     flow-bin
@@ -7,4 +7,7 @@ dependencies -
     styled-components
     
     
-<img width="696" alt="Screenshot 2022-07-18 at 12 23 18 PM" src="https://user-images.githubusercontent.com/54979586/179461477-2dc029ff-2d09-4ef7-af3c-1c398614978c.png">
+
+<img width="668" alt="Screenshot 2022-07-22 at 6 47 13 PM" src="https://user-images.githubusercontent.com/54979586/180447120-25749336-fa5c-493f-95f7-472717510fd6.png"> 
+<img width="668" alt="Screenshot 2022-07-22 at 6 45 57 PM" src="https://user-images.githubusercontent.com/54979586/180447242-52a56d18-5576-4605-b4f7-e4417caebc10.png">
+<img width="668" alt="Screenshot 2022-07-22 at 6 46 10 PM" src="https://user-images.githubusercontent.com/54979586/180447272-2e38a9a0-7ace-4a4c-b16d-98daae9d9b12.png">
